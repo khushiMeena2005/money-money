@@ -1,38 +1,173 @@
-.App {
+*{
+  box-sizing: border-box;
+}
+
+body{
+
+    background-attachment: fixed;
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+main{
+ 
+  margin:30px auto;
+
+}
+
+h1{
+  font-weight: 600;
+  margin-top: 50px;
   text-align: center;
+
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ .horizontalForm {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-basis: 100%;
+}
+
+label {
+  flex-basis: 120px;
+  font-weight: bold;
+}
+
+select,
+input[type="text"],
+input[type="date"] {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+ button {
+
+  flex-basis:100%;
+  padding: 10px 20px;
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 600px) {
+  .horizontalForm .form-row {
+    flex-basis: 100%;
+  }
+
+  label {
+    flex-basis: 100%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+table{
+   margin: auto;
+   width:80%;
+   border: 1px solid black;
+   border-collapse: collapse;
+   
+}
+
+table caption{
+   margin:10px 0px 15px 0px;
+   font-size:30px;
+   font-weight: 600;
+   
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   color:rgb(85, 22, 148);
+}
+
+
+
+th,td{
+  color: black;
+  
+    border: 1px solid black;
+   border-collapse: collapse;
+   border-color: rgb(12, 12, 168);
+}
+
+tr{
+  font-size:20px;
+   height:60px;
+}
+
+tr:nth-child(even) {
+  background-color: #40d891;
+}
+
+tr:hover {background-color:rgba(39, 144, 186, 0.216);}
+
+td{
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+   white-space: nowrap;
+}
+
+
+.btn{
+  padding: 10px 10px;
+  color: white;
+  font-size: 10px;
+ cursor: pointer;
+ border-radius: 10px;
+ background-color: #e40a0a;
+}
+
+
+.diary{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size:25px;
+  gap: 20px;
+     padding: 20px;
+    height: 100px;
+    width: 100%;
+   
+   /*  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  
+    -webkit-transition: -webkit-box-shadow 0.4s;
+    transition: -webkit-box-shadow 0.4s;
+    -o-transition: box-shadow 0.4s;
+    transition: box-shadow 0.4s;
+    transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
+    margin-bottom: 40px;*/
+}
+
+
+.income{
+  color: rgb(2, 116, 2);
+}
+.spendings{
+  color: rgba(215, 6, 6, 0.727);
+}
+
+.balance{
+   font-size:40px;
+   color: crimson;
 }
